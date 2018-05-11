@@ -9,7 +9,19 @@
         <ui:composition template="./buyerTemplate.xhtml">
 
             <ui:define name="content">
-                <!--Créez ici la table listant les commandes de l'acheteur. -->
+                <h:dataTable value="#{orderListModel.orders}" var="order">
+                    <h:column>
+                        #{order.orderDate}
+                    </h:column>
+                    
+                    <h:column>
+                        #{order.orderedItem.name}
+                    </h:column>
+                    
+                    <h:column>
+                        #{order.orderedItem.seller.lastname}
+                    </h:column>
+                </h:dataTable>
                 
             </ui:define>
 
