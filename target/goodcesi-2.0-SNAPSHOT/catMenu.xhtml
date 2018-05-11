@@ -8,7 +8,7 @@
     <h:body>
         <h:form>
             <ui:repeat value="#{categoriesCache.categories}" var="cat">
-                <h:commandLink value="#{cat.title}">
+                <h:commandLink value="#{cat.title}" action="#{catalogModel.retrieveItemsFromCategory()}">
                     <f:param name="catId" value="#{cat.id}"/>
                 </h:commandLink>
                 <br/>

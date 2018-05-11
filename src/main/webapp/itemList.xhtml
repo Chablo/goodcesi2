@@ -6,7 +6,7 @@
 
     <ui:define name="content">
         <h:form>
-            <h:dataTable var="item">
+            <h:dataTable var="item" value="#{catalogModel.itemsFromCategory}">
             <h:column>
                 <h:link outcome="selectedItem?id=#{item.id}"> <!-- pour requêtes de type GET -->
                     

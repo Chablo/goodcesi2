@@ -11,6 +11,7 @@ import java.util.*;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 
 /**
@@ -19,6 +20,7 @@ import javax.inject.Inject;
  * bean chargé du parcours dans le catalogue
  */
 
+@Named("catalogModel")
 @RequestScoped
 public class CatalogBean{
     
