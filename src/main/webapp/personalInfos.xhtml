@@ -10,8 +10,24 @@
 
             <ui:define name="content">
                 <h3>Saisissez vos informations personnelles</h3><br/>
-                 <!-- créez ici le formulaire permettant de saisir les informations perso de l'utilisateur-->
-            
+                <h:form>
+                    <h:panelGrid rendered="true">
+                        prénom
+                        <h:inputText value="#{accountModel.fname}" />
+                        
+                        nom
+                        <h:inputText value="#{accountModel.lname}" />
+                        
+                        adresse
+                        <h:inputTextarea value="#{accountModel.address}" />
+                        
+                        email
+                        <h:inputText value="#{accountModel.email}" />
+                        
+                        &nbsp;
+                        <h:commandButton value="suivant" action="groupsSelection"/>
+                    </h:panelGrid>                    
+                </h:form>
             </ui:define>
 
         </ui:composition>
